@@ -164,25 +164,6 @@
     copyright © 2026 Browser Updates
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const searchBar = document.getElementById("searchBar");
-      const sections = document.querySelectorAll(".update-section");
-
-      searchBar.addEventListener("input", function() {
-        const query = searchBar.value.toLowerCase();
-
-        sections.forEach(section => {
-          const text = section.innerText.toLowerCase();
-          if (query.trim() === "" || text.includes(query)) {
-            section.style.display = "block"; // show matching
-          } else {
-            section.style.display = "none"; // hide non-matching
-          }
-        });
-      });
-    });
-  </script>
 
 </body>
 </html>
