@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Browser Updates</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      color: #000;
+    }
+
+    header {
+      background-color: #cc0000;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    header input {
+      margin-top: 10px;
+      padding: 8px;
+      width: 60%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #ddd;
+      padding: 10px;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 8px 15px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      border-radius: 4px;
+      background-color: #eee;
+    }
+
+    nav a:hover {
+      background-color: #ccc;
+      color: #333;
+    }
+
+    .update-section {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 800px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .update-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .update-section h2 {
+      font-size: 18px;
+      margin: 0 0 10px;
+      color: #000;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .update-section p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0 0 10px;
+    }
+
+    .update-section a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .update-section a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #cc0000;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mini Browser</h1>
+    <p>ALL KINDS OF NEWS AND UPDATES ARE AVAILABLE HERE!</p>
+    <input type="text" id="searchBar" placeholder="Search updates...">
+  </header>
+
+  <nav>
+    <a href="youtube5.html">Home</a>
+    <a href="project88.html">Music</a>
+    <a href="gaming.html">Gaming</a>
+    <a href="news.html">News</a>
+  </nav>
+
+  <main>
+    <div class="update-section">
+      <h2>Gold & Silver Prices</h2>
+      <p>Gold in Delhi: 24K – ₹16,236/g, Silver – ₹279.90/g. Prices remain volatile across metros.</p>
+      <a href="https://economictimes.indiatimes.com/commoditysummary/symbol-GOLD.cms" target="_blank">Read More</a>
+    </div>
+
+    <div class="update-section">
+      <h2>Petrol & Diesel Rates</h2>
+      <p>Global crude crosses $100/barrel, but petrol and diesel prices remain unchanged in India today.</p>
+      <a href="https://www.livemint.com/market/commodities" target="_blank">Read More</a>
+    </div>
+
+    <div class="update-section">
+      <h2>Holiday Announcement</h2>
+      <p>Jammu & Kashmir govt prepones Jumat-ul-Vida holiday to March 13, 2026 due to Ramadan uncertainty.</p>
+      <a href="https://timesofindia.indiatimes.com/city/srinagar" target="_blank">Read More</a>
+    </div>
+
+
+    <div class="update-section">
+      <h2>International Headlines</h2>
+      <p>Explosions reported in Dubai as Iran escalates Gulf tensions, impacting oil markets worldwide.</p>
+      <a href="https://www.aljazeera.com/news/middleeast/" target="_blank">Read More</a>
+    </div>
+
+    <div class="update-section">
+      <h2>Hyderabad Tech Summit</h2>
+      <p>India’s largest tech summit kicks off in Hyderabad, showcasing AI, blockchain, and gaming innovations.</p>
+      <a href="https://www.hydtechsummit.com/program" target="_blank">Read More</a>
+    </div>
+
+    <div class="update-section">
+      <h2>IPL 2026 Opening Match</h2>
+      <p>Sunrisers Hyderabad face Chennai Super Kings in a thrilling opener at Uppal Stadium.</p>
+      <a href="https://www.iplt20.com/matches/schedule-fixtures" target="_blank">Read More</a>
+    </div>
+
+    <div class="update-section">
+      <h2>Telugu Film Industry Buzz</h2>
+      <p>Upcoming blockbusters like Pushpa 2 and Devara set new records in pre-release business.</p>
+      <a href="https://www.123telugu.com/mnews" target="_blank">Read More</a>
+    </div>
+  </main>
+
+  <footer>
+    copyright © 2026 Browser Updates
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const searchBar = document.getElementById("searchBar");
+      const sections = document.querySelectorAll(".update-section");
+
+      searchBar.addEventListener("input", function() {
+        const query = searchBar.value.toLowerCase();
+
+        sections.forEach(section => {
+          const text = section.innerText.toLowerCase();
+          if (query.trim() === "" || text.includes(query)) {
+            section.style.display = "block"; // show matching
+          } else {
+            section.style.display = "none"; // hide non-matching
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
